@@ -1,0 +1,201 @@
+@font-face {
+  font-family: Graphik;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Graphik/Graphik-Regular.woff2") format("woff2"), url("../fonts/Graphik/Graphik-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Graphik/Graphik-Bold.woff2") format("woff2"), url("../fonts/Graphik/Graphik-Bold.woff") format("woff");
+}
+
+.body-wrapper {
+  background-color: #19191b;
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 39px;
+  color: #BDBDC3;
+}
+
+.container {
+  max-width: 1248px;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1248px;
+  width: 100%;
+  padding: 40px 24px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  position: relative;
+}
+
+.header__logo::after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 0;
+  -webkit-border-radius: 1px;
+          border-radius: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#5454D4), to(#BDBDC3));
+  background: -webkit-linear-gradient(left, #5454D4, #BDBDC3);
+  background: -o-linear-gradient(left, #5454D4, #BDBDC3);
+  background: linear-gradient(to right, #5454D4, #BDBDC3);
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.header__logo:hover::after {
+  width: 100%;
+}
+
+.header__btn {
+  padding: 12px 41px 10px;
+  background-color: #19191b;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header__btn:hover {
+  background-color: #fff;
+  color: #5454D4;
+  font-weight: 600;
+}
+
+.nav {
+  padding-left: 50px;
+}
+
+.nav__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[4];
+      grid-template-columns: repeat(4, -webkit-max-content);
+      grid-template-columns: repeat(4, max-content);
+  grid-column-gap: 40px;
+}
+
+.nav__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.55px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.nav__link:hover {
+  color: #5454D4;
+  font-weight: 600;
+}
+
+.nav__link--active {
+  color: #5454D4;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100vh;
+  padding-bottom: 15px;
+}
+
+.intro__header, .intro__img {
+  width: 100%;
+  max-width: 536px;
+  min-width: 333px;
+}
+
+.intro__title {
+  font-family: Graphik, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 80px;
+  line-height: 84px;
+  margin-bottom: 24px;
+}
+
+.intro__text {
+  letter-spacing: -0.656526px;
+  margin-bottom: 50px;
+}
+
+.intro__img {
+  margin-bottom: 27px;
+  margin-right: -8px;
+  max-width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-link {
+  position: relative;
+  padding: 16px 59px 15px 27px;
+  color: #ffffff;
+  background-color: #5454D4;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 25px;
+  background: url(../img/arrow-right-up.svg);
+  background-position: center center;
+  width: 24px;
+  height: 24px;
+}

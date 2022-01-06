@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Graphik;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Graphik/Graphik-Regular.woff2") format("woff2"), url("../fonts/Graphik/Graphik-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: Graphik;
+    font-display: swap;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Graphik/Graphik-Bold.woff2") format("woff2"), url("../fonts/Graphik/Graphik-Bold.woff") format("woff");
+}
+
+//     font-family: Graphik, Arial, Helvetica, sans-serif;
+$nunito-sans: 'Nunito Sans',
+Arial,
+Helvetica,
+sans-serif;
+$whtie: #ffffff;
+$black:#19191b;
+$blue: #5454D4;
+$gray: #BDBDC3;
+$bg-blue:#212030;
+$bg-red:#342020;
+$bg-yellow:#373122;
+.body-wrapper {
+    background-color: $black;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 39px;
+    color: $gray;
+}
+
+// END body-wrapper
+.container {
+    max-width: 1248px;
+    width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+// END container
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1248px;
+    width: 100%;
+    padding: 40px 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            content: "";
+            height: 2px;
+            width: 0;
+            border-radius: 1px;
+            background: linear-gradient(to right, $blue, $gray);
+            transition: all 0.5s linear;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    &__logo-img {}
+    &__btn {
+        padding: 12px 41px 10px;
+        background-color: $black;
+        color: $whtie;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.5px;
+        transition: all 0.2s linear;
+    }
+    &__btn:hover {
+        background-color: #fff;
+        color: $blue;
+        font-weight: 600;
+    }
+}
+
+// END header
+.nav {
+    padding-left: 50px;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        grid-column-gap: 40px;
+    }
+    &__item {}
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24.55px;
+        transition: all 0.2s linear;
+    }
+    &__link:hover {
+        color: $blue;
+        font-weight: 600;
+    }
+    &__link--active {
+        color: $blue;
+    }
+}
+
+// END nav
+.main {}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding-bottom: 15px;
+    &__header {}
+    &__header,
+    &__img {
+        width: 100%;
+        max-width: 536px;
+        min-width: 333px;
+    }
+    &__title {
+        font-family: Graphik, Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: $whtie;
+        font-size: 80px;
+        line-height: 84px;
+        margin-bottom: 24px;
+    }
+    &__text {
+        letter-spacing: -0.656526px;
+        margin-bottom: 50px;
+    }
+    &__img {
+        margin-bottom: 27px;
+        margin-right: -8px;
+        max-width: 500px;
+        object-fit: cover;
+    }
+}
+
+.btn-link {
+    position: relative;
+    padding: 16px 59px 15px 27px;
+    color: $whtie;
+    background-color: $blue;
+    border-radius: 4px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        right: 25px;
+        background: url(../img/arrow-right-up.svg);
+        background-position: center center;
+        width: 24px;
+        height: 24px;
+    }
+}
