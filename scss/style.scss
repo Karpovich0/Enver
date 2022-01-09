@@ -29,7 +29,14 @@ $gray: #BDBDC3;
 $bg-blue:#212030;
 $bg-red:#342020;
 $bg-yellow:#373122;
+section {
+    margin-top: 150px;
+}
+
 .body-wrapper {
+    display: grid;
+    grid-template-rows: 1f max-content;
+    grid-template-areas: "main" "footer"; //header is absent due to it was positioned absolute
     background-color: $black;
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -61,23 +68,6 @@ $bg-yellow:#373122;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__logo {
-        position: relative;
-        &::after {
-            position: absolute;
-            bottom: -9px;
-            left: 0;
-            content: "";
-            height: 2px;
-            width: 0;
-            border-radius: 1px;
-            background: linear-gradient(to right, $blue, $gray);
-            transition: all 0.5s linear;
-        }
-        &:hover::after {
-            width: 100%;
-        }
-    }
     &__btn {
         padding: 12px 41px 10px;
         background-color: $black;
@@ -97,15 +87,34 @@ $bg-yellow:#373122;
     }
 }
 
+.logo {
+    flex-shrink: 0;
+    position: relative;
+    &::after {
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        content: "";
+        height: 2px;
+        width: 0;
+        border-radius: 1px;
+        background: linear-gradient(to right, $blue, $gray);
+        transition: all 0.5s linear;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
 // END header
 .nav {
-    padding-left: 50px;
+    padding: 0 10px 0 100px;
     &__list {
-        display: grid;
-        grid-template-columns: repeat(4, max-content);
-        grid-column-gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
     }
     &__link {
+        margin-right: 40px;
         font-weight: 400;
         font-size: 18px;
         line-height: 24.55px;
@@ -123,11 +132,13 @@ $bg-yellow:#373122;
 // END nav
 .main {
     position: relative;
+    grid-area: main;
 }
 
 .intro {
     position: relative;
-    padding: 107px 0;
+    margin-top: 0;
+    padding-top: 107px;
     &__inner {
         position: relative;
         z-index: 10;
@@ -158,20 +169,19 @@ $bg-yellow:#373122;
         margin-bottom: 60px;
     }
     &__img {
-        margin-bottom: 27px;
         margin-right: -33px;
         max-width: 598px;
         object-fit: cover;
     }
     &__bg-left {
         position: absolute;
-        z-index: 4;
+        z-index: -6;
         top: 0;
         left: 0;
     }
     &__bg-right {
         position: absolute;
-        z-index: 5;
+        z-index: -5;
         top: 0;
         right: 0;
     }
@@ -179,12 +189,20 @@ $bg-yellow:#373122;
 
 // END intro
 .btn-link {
+    min-width: 201px;
     position: relative;
     padding: 16px 59px 15px 27px;
     color: $whtie;
     background-color: $blue;
     border-radius: 4px;
-    &::after {
+    transition: background-color 0.2s linear;
+    &--btn-tag {
+        align-self: center;
+        padding-right: 27px;
+        border: none;
+        text-align: center;
+    }
+    &--after::after {
         content: "";
         position: absolute;
         top: 17px;
@@ -194,11 +212,13 @@ $bg-yellow:#373122;
         width: 24px;
         height: 24px;
     }
+    &:hover {
+        background-color: #6161dc;
+    }
 }
 
 // END btn-link
 .video {
-    padding-top: 17px;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -252,3 +272,45 @@ $bg-yellow:#373122;
         }
     }
 }
+
+// END video
+.contact-us {
+    padding: 187px 0;
+    background-color: #1C1B1D;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        width: 100%;
+        max-width: 826px;
+        font-family: $graphik;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 66px;
+        color: #FFFFFF;
+    }
+}
+
+.footer {
+    padding: 50px 0 100px;
+    grid-area: footer;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        nav {
+            margin-left: auto;
+        }
+    }
+    &__copyrights {
+        width: 100%;
+        max-width: 285px;
+        margin-left: 50px;
+        text-align: right;
+        font-size: 16px;
+        line-height: 38px;
+        letter-spacing: -0.5px;
+    }
+}
+
+// END footer
