@@ -235,6 +235,7 @@ section {
   -webkit-transition: background-color 0.2s linear;
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
+  cursor: pointer;
 }
 
 .btn-link--btn-tag {
@@ -335,7 +336,192 @@ section {
   background-color: #6161dc;
 }
 
+.service {
+  margin-top: 148;
+}
+
+.service .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 140px 1fr;
+      grid-template-rows: 140px 1fr;
+  grid-row-gap: 50px;
+}
+
+.service__title {
+  padding: 0 277px;
+  font-family: Graphik, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.service__list {
+  padding: 0 24px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
+.service__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 48px 40px;
+}
+
+.service__img-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  width: 69px;
+  height: 69px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #212030;
+}
+
+.service__img-wrapper--blue-bg {
+  background-color: #212030;
+}
+
+.service__img-wrapper--red-bg {
+  background-color: #342020;
+}
+
+.service__img-wrapper--yellow-bg {
+  background-color: #373122;
+}
+
+.service__sevices-name {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.750316px;
+  color: #FFFFFF;
+}
+
+.service__description {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.500211px;
+}
+
+.portfolio {
+  margin-top: 153px;
+}
+
+.portfolio > .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 79px 475px;
+      grid-template-rows: 79px 475px;
+  grid-row-gap: 70px;
+}
+
+.portfolio__title {
+  font-family: Graphik, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 79px;
+  color: #FFFFFF;
+}
+
+.portfolio__slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio__slider-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+}
+
+.portfolio__slider-item {
+  width: 384px;
+  height: 301px;
+  padding: 24px;
+  background-color: #1e1e20;
+  -webkit-border-radius: 14px;
+          border-radius: 14px;
+}
+
+.portfolio__slider-item:nth-child(2) {
+  margin-top: 58px;
+}
+
+.portfolio__slider-item:nth-child(3) {
+  margin-top: 116px;
+}
+
+.portfolio__controls {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-column-gap: 8px;
+  margin: 0 auto;
+}
+
+.portfolio__slider-btn {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #121213;
+  cursor: pointer;
+}
+
+.portfolio__slider-btn--active {
+  width: 16px;
+  background-color: #5454D4;
+}
+
 .contact-us {
+  margin-top: 168px;
   padding: 187px 0;
   background-color: #1C1B1D;
 }

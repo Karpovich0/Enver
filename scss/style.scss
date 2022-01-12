@@ -196,6 +196,7 @@ section {
     background-color: $blue;
     border-radius: 4px;
     transition: background-color 0.2s linear;
+    cursor: pointer;
     &--btn-tag {
         align-self: center;
         padding-right: 27px;
@@ -274,7 +275,131 @@ section {
 }
 
 // END video
+.service {
+    margin-top: 148;
+    .container {
+        display: grid;
+        grid-template-rows: 140px 1fr;
+        grid-row-gap: 50px;
+    }
+    &__title {
+        padding: 0 277px;
+        font-family: $graphik;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 70px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &__list {
+        padding: 0 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 24px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 40px;
+    }
+    &__img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 69px;
+        height: 69px;
+        border-radius: 50%;
+        background-color: $bg-blue;
+    }
+    &__img-wrapper--blue-bg {
+        background-color: $bg-blue;
+    }
+    &__img-wrapper--red-bg {
+        background-color: $bg-red;
+    }
+    &__img-wrapper--yellow-bg {
+        background-color: $bg-yellow;
+    }
+    &__img {}
+    &__sevices-name {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: -0.750316px;
+        color: #FFFFFF;
+    }
+    &__description {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: -0.500211px;
+    }
+}
+
+// END service
+.portfolio {
+    margin-top: 153px;
+    &>.container {
+        display: grid;
+        grid-template-rows: 79px 475px;
+        grid-row-gap: 70px;
+    }
+    &__title {
+        font-family: $graphik; //designer set here Nunito sans, but all other titles was set by him as graphik, so probably here should be graphik font-family
+        font-weight: 800;
+        font-size: 58px;
+        line-height: 79px;
+        color: #FFFFFF;
+    }
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__slider-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 24px;
+    }
+    &__slider-item {
+        width: 384px;
+        height: 301px;
+        padding: 24px;
+        background-color: #1e1e20;
+        border-radius: 14px;
+    }
+    &__slider-item:nth-child(2) {
+        margin-top: 58px;
+    }
+    &__slider-item:nth-child(3) {
+        margin-top: 116px;
+    }
+    &__controls {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-column-gap: 8px;
+        margin: 0 auto;
+    }
+    &__slider-btn {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #121213;
+        cursor: pointer;
+    }
+    &__slider-btn--active {
+        width: 16px;
+        background-color: $blue;
+    }
+}
+
 .contact-us {
+    margin-top: 168px;
     padding: 187px 0;
     background-color: #1C1B1D;
     &__inner {
