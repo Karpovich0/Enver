@@ -168,9 +168,39 @@ section {
         letter-spacing: -0.656526px;
         margin-bottom: 60px;
     }
+    &__img-wrapper {
+        margin-right: -33px;
+        position: relative;
+        max-width: 598px;
+        width: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 124px;
+            left: -103px;
+            width: 95px;
+            height: 28px;
+            background-image: url(../img/sections-figures/vector.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 33px;
+            left: -160px;
+            width: 105px;
+            height: 120px;
+            background-image: url(../img/sections-figures/triangle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
     &__img {
         margin-right: -33px;
         max-width: 598px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     &__bg-left {
@@ -283,6 +313,7 @@ section {
         grid-row-gap: 50px;
     }
     &__title {
+        position: relative;
         padding: 0 277px;
         font-family: $graphik;
         font-weight: bold;
@@ -290,13 +321,49 @@ section {
         line-height: 70px;
         text-align: center;
         color: #FFFFFF;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -32px;
+            left: 88px;
+            width: 105px;
+            height: 120px;
+            background-image: url(../img/sections-figures/triangle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 8px;
+            right: 34px;
+            width: 42px;
+            height: 42px;
+            background-image: url(../img/sections-figures/plus.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(60deg);
+        }
     }
     &__list {
+        position: relative;
         padding: 0 24px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 24px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -45px;
+            left: 3px;
+            width: 42px;
+            height: 42px;
+            background-image: url(../img/sections-figures/plus.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(27deg);
+        }
     }
     &__item {
         display: flex;
@@ -345,16 +412,40 @@ section {
 .portfolio {
     margin-top: 153px;
     &>.container {
+        position: relative;
         display: grid;
         grid-template-rows: 79px 475px;
         grid-row-gap: 70px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            left: -22px;
+            width: 95px;
+            height: 28px;
+            background-image: url(../img/sections-figures/vector.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
     &__title {
+        position: relative;
         font-family: $graphik; //designer set here Nunito sans, but all other titles was set by him as graphik, so probably here should be graphik font-family
         font-weight: 800;
         font-size: 58px;
         line-height: 79px;
         color: #FFFFFF;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -31px;
+            right: 49px;
+            height: 67px;
+            width: 74px;
+            background-image: url(../img/sections-figures/circles.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
     &__slider {
         display: flex;
@@ -402,6 +493,33 @@ section {
     margin-top: 168px;
     padding: 187px 0;
     background-color: #1C1B1D;
+    &>.container {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -118px;
+            right: 34px;
+            width: 42px;
+            height: 42px;
+            background-image: url(../img/sections-figures/plus.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -120px;
+            left: 52px;
+            height: 55px;
+            width: 72px;
+            background-size: 100%;
+            background-image: url(../img/sections-figures/circles.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(28deg);
+        }
+    }
     &__inner {
         display: flex;
         justify-content: space-between;

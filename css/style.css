@@ -203,9 +203,42 @@ section {
   margin-bottom: 60px;
 }
 
+.intro__img-wrapper {
+  margin-right: -33px;
+  position: relative;
+  max-width: 598px;
+  width: 100%;
+}
+
+.intro__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 124px;
+  left: -103px;
+  width: 95px;
+  height: 28px;
+  background-image: url(../img/sections-figures/vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro__img-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 33px;
+  left: -160px;
+  width: 105px;
+  height: 120px;
+  background-image: url(../img/sections-figures/triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .intro__img {
   margin-right: -33px;
   max-width: 598px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -349,6 +382,7 @@ section {
 }
 
 .service__title {
+  position: relative;
   padding: 0 277px;
   font-family: Graphik, Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -358,7 +392,35 @@ section {
   color: #FFFFFF;
 }
 
+.service__title::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 88px;
+  width: 105px;
+  height: 120px;
+  background-image: url(../img/sections-figures/triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service__title::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 34px;
+  width: 42px;
+  height: 42px;
+  background-image: url(../img/sections-figures/plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
 .service__list {
+  position: relative;
   padding: 0 24px;
   display: -ms-grid;
   display: grid;
@@ -367,6 +429,21 @@ section {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 24px;
+}
+
+.service__list::after {
+  content: "";
+  position: absolute;
+  bottom: -45px;
+  left: 3px;
+  width: 42px;
+  height: 42px;
+  background-image: url(../img/sections-figures/plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(27deg);
+      -ms-transform: rotate(27deg);
+          transform: rotate(27deg);
 }
 
 .service__item {
@@ -441,6 +518,7 @@ section {
 }
 
 .portfolio > .container {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 79px 475px;
@@ -448,12 +526,37 @@ section {
   grid-row-gap: 70px;
 }
 
+.portfolio > .container::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: -22px;
+  width: 95px;
+  height: 28px;
+  background-image: url(../img/sections-figures/vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .portfolio__title {
+  position: relative;
   font-family: Graphik, Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 58px;
   line-height: 79px;
   color: #FFFFFF;
+}
+
+.portfolio__title::after {
+  content: "";
+  position: absolute;
+  bottom: -31px;
+  right: 49px;
+  height: 67px;
+  width: 74px;
+  background-image: url(../img/sections-figures/circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .portfolio__slider {
@@ -524,6 +627,39 @@ section {
   margin-top: 168px;
   padding: 187px 0;
   background-color: #1C1B1D;
+}
+
+.contact-us > .container {
+  position: relative;
+}
+
+.contact-us > .container::before {
+  content: "";
+  position: absolute;
+  top: -118px;
+  right: 34px;
+  width: 42px;
+  height: 42px;
+  background-image: url(../img/sections-figures/plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-us > .container::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 52px;
+  height: 55px;
+  width: 72px;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-image: url(../img/sections-figures/circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(28deg);
+      -ms-transform: rotate(28deg);
+          transform: rotate(28deg);
 }
 
 .contact-us__inner {
